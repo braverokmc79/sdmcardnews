@@ -1,0 +1,17 @@
+.like-icon{
+    cursor: pointer;
+}
+.like-btn{
+    font-size: 34px;
+    width: 30px;
+     color: #454343;
+}
+
+.like-active i{
+    color: #d64040;
+}
+.like-span{
+    position: relative;
+    top:0px;
+    margin-right: 5px;
+}
