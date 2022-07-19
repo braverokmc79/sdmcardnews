@@ -249,6 +249,8 @@ modalAction={
 	
 	
 	portfolioOpen:function(e){
+		$("#topBtn").hide();
+		
 		$("#commentAdd").val("");
 		const nttId=$(e).attr("data-nttid");
 		//console.log(nttId);
