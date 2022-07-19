@@ -251,6 +251,7 @@ button,input, textarea{
 
 #mainNav .navbar-brand {
     color: #fff;
+    font-size: 1.55em !important;
 }
 @media (min-width: 992px) {
     #mainNav .navbar-brand {

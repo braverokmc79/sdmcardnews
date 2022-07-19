@@ -1,4 +1,4 @@
-let currentPageNo=1;
+let inFinitycurrentPageNo=1;
 infinityScroll={
 	init:function(){
 		this.getList();
@@ -7,7 +7,7 @@ infinityScroll={
 		window.onscroll = function(e) {
 		    //window height + window scrollY 값이 document height보다 클 경우,
 		    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {						
-				infinityScroll.getList(currentPageNo);				
+				infinityScroll.getList(inFinitycurrentPageNo);				
 		    }
 		};
 				
@@ -15,7 +15,7 @@ infinityScroll={
 	
 	
 	getList:function(pageIndex){
-		if(pageIndex==null || pageIndex==undefined || pageIndex==""){
+		if(pageIndex==null || pageIndex==undefined || pageIndex=="" || pageIndex==0){
 			pageIndex=1;
 		}
 		
@@ -37,9 +37,9 @@ infinityScroll={
 				//console.log(res);
 				
 				//**** 서버에서 계산된 마지막 페이지 번호가  자사스크립트 currentPageNo 작을 경우 중단처리
-				if(currentPageNo >res.paginationInfo.lastPageNo)return;									
-				console.log(" currentPageNo {} - {}",res.paginationInfo.lastPageNo , currentPageNo , res.paginationInfo.currentPageNo);
-				currentPageNo++;
+				if(inFinitycurrentPageNo >res.paginationInfo.lastPageNo)return;									
+				console.log("inFinitycurrentPageNo : currentPageNo  - ", inFinitycurrentPageNo , res.paginationInfo.lastPageNo);
+				inFinitycurrentPageNo++;
 				
 				
 				let html="";
@@ -68,7 +68,7 @@ infinityScroll={
 						                            </a>
 						                            <div class="portfolio-caption">
 						                                <div class="portfolio-caption-heading">
-															<c:out value="${result.nttSj}" />									
+															${result.nttSj}								
 						                                </div>
 						                                <div class="portfolio-caption-subheading text-muted">
 						

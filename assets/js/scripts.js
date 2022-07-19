@@ -240,8 +240,10 @@ modalAction={
 		$(".portfolio-link").off("click");
 				
 	    $(".portfolio-link").on("click",function(e){
-				modalAction.portfolioOpen(this);		
+				modalAction.portfolioOpen(this);	
+				//$("#page-top").hide();					
 	    });
+
 
 	},
 	
@@ -258,14 +260,18 @@ modalAction={
         w=parseFloat(w)*80/100; //1 첫번째 줄이기
         w=w*85/100; //2 두번째 줄이기
 
-        h=parseFloat(h)*75/100;
-        h=h*55/100;
+        h=parseFloat(h)*90/100;
+        h=h*90/100;
 
         if(h>w){
-            h=423.92;
+            h=w;
+        }
+
+  		if(h>800){
+            h=800;
         }
       //  console.log("w2  - {}", w);
-      //  console.log("h  - {}", h);
+       console.log("h  - {}", h);
 
         let mW=$(".portfolio-modal").css("width");
         let modalContent=$("#modalContent").css("width");
