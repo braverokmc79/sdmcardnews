@@ -62,7 +62,7 @@ infinityScroll={
 						                                </div>
 						                  		
 											     <img class="img-fluid" 
-													  src='/cmm/fms/getImage.do?atchFileId=${result.atchFileId}&fileSn=0"/>' 
+													  src='/cmm/fms/getImage.do?atchFileId=${result.atchFileId}&fileSn=${result.fileSn}"/>' 
 													 alt="${result.frstRegisterNm}" />
 						                                
 						                            </a>
