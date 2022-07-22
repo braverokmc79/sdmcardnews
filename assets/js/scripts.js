@@ -245,6 +245,11 @@ modalAction={
 	    });
 
 
+		$(".slick-arrow").on("click", function(){
+			$(".slick-arrow").css("background", "#9e9e9e");
+		});
+
+
 	},
 	
 	
@@ -259,15 +264,17 @@ modalAction={
         let w=document.body.offsetWidth;
         let h=document.body.offsetHeight;
         //w=parseFloat(w)*68.75/100;
-        w=parseFloat(w)*65/100; //1 첫번째 줄이기
+        w=parseFloat(w)*75/100; //1 첫번째 줄이기
         w=w*70/100; //2 두번째 줄이기
 
-        h=parseFloat(h)*65/100;
+        h=parseFloat(h)*75/100;
         h=h*70/100;
 
         if(w>=h){
             h=w;
         }
+
+
 
  /* 		if(h>800){
             h=auto;
