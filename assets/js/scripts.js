@@ -265,7 +265,7 @@ modalAction={
         h=parseFloat(h)*65/100;
         h=h*70/100;
 
-        if(h>w){
+        if(h==w){
             h=w;
         }
 
