@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
         // Activate Bootstrap scrollspy on the main nav element
         const mainNav = document.body.querySelector('#mainNav');
-        console.log("mainNav :" +mainNav);
+        //console.log("mainNav :" +mainNav);
         if (mainNav) {
 
             new bootstrap.ScrollSpy(document.body, {
@@ -259,19 +259,19 @@ modalAction={
         let w=document.body.offsetWidth;
         let h=document.body.offsetHeight;
         //w=parseFloat(w)*68.75/100;
-        w=parseFloat(w)*80/100; //1 첫번째 줄이기
-        w=w*85/100; //2 두번째 줄이기
+        w=parseFloat(w)*65/100; //1 첫번째 줄이기
+        w=w*70/100; //2 두번째 줄이기
 
-        h=parseFloat(h)*90/100;
-        h=h*90/100;
+        h=parseFloat(h)*65/100;
+        h=h*70/100;
 
         if(h>w){
             h=w;
         }
 
-  		if(h>800){
-            h=800;
-        }
+ /* 		if(h>800){
+            h=auto;
+        }*/
       //  console.log("w2  - {}", w);
        console.log("h  - {}", h);
 
@@ -297,7 +297,7 @@ modalAction={
 			dataType:"json",
 			success:function(res){				
 				//res=JSON.parse(res);	
-				console.log(res);	
+				//console.log(res);	
 				
 				$("#modal-h2").html(res.boardVO.nttSj);
 				$("#modal-date").html(res.boardVO.frstRegisterPnttm);
